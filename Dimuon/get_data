@@ -1,0 +1,12 @@
+#! /bin/bash
+
+FILES="DYJetsToLL_M.root DYJetsToLL_M.db"
+
+for FILE in $FILES
+do
+    if [[ ! -f "$FILE" ]]
+    then
+        wget ccl.cse.nd.edu/download_tmp/${FILE}
+    fi
+done
+
